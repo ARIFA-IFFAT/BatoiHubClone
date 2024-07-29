@@ -1,0 +1,8 @@
+.cus_icon_hover {
+    transition: all 0.3s;
+}
+
+.cus_icon_hover:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    transform: translateY(-1px) !important;
+}
