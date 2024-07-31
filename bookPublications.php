@@ -40,7 +40,7 @@ $conn->close();
 include './header.php';
  ?>
 
-<section class="mt-5 mb-5 pt-5 pb-5 border-bottom border-top">
+<section class="mt-5 mb-3 pt-5 pb-5 border-bottom border-top">
     <div class="container">
         <div class="row">
             <div class="col-6 col-md-4 col-lg-3 ">
@@ -53,7 +53,10 @@ include './header.php';
                     <p class="fs-6 text-black fw-bold">Publisher: <span class="text-primary ms-2"><?php echo $bookDetails['Publisher']; ?></span></p>
                     <p class="fs-6 text-black fw-bold">Author: <span class="text-primary ms-2"> <?php echo $bookDetails['Author'] ; ?></span></p>
                 </div>
-                <a class="btn btn-primary btn-md px-5" href="https://www.amazon.com/"><i class="fa fa-external-link" aria-hidden="true"></i> Storefront</a>
+                <div class="border-bottom pb-3">
+                    <a class="btn btn-primary btn-md px-5" href="https://www.amazon.com/"><i class="fa fa-external-link" aria-hidden="true"></i> Storefront</a>
+
+                </div>
             </div>
         </div>
     </div>
