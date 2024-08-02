@@ -19,21 +19,21 @@
     <section id="navbarSection">
         <nav class="navbar navbar-expand bg-white ">
             <div class="container d-block px-3">
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center flex-wrap-reverse">
                     <div class="d-flex align-items-center pt-0 dropdown position-relative nav-item">
                         <div class="d-flex align-item-center nav-item mt-1">
-                            <a class="d-flex align-item-center text-decoration-none" href="#"><img class="me-3" src="./img/batoi-logo-og.png" alt="logo" height="30"><span class="logo_bar me-3 fs-4 fw-light text-body-secondary">|</span><span class="fs-5 text-success me-3">Hub</span> </a>
+                            <a class="d-flex align-item-center text-decoration-none" href="/"><img class="me-3" src="./img/batoi-logo-og.png" alt="logo" height="30"><span class="logo_bar me-3 fs-4 fw-light text-body-secondary">|</span><span class="fs-5 text-success me-3">Hub</span> </a>
                         </div>
                         <div class="dropdown focus-ring focus-ring-light">
                             <a class="btn dropdown-toggle border-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 English
                             </a>
-
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">English</a></li>
                                 <li><a class="dropdown-item" href="#">Odia</a></li>
                                 <li><a class="dropdown-item" href="#">Hindi</a></li>
                             </ul>
+                            
                         </div>
                     </div>
                     <div class="collapse navbar-collapse">
