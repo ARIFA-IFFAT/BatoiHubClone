@@ -33,7 +33,7 @@ include './header.php';
         var Publisher = encodeURIComponent('<?php echo $bookDetails['Publisher']; ?>');
         var price = encodeURIComponent('100.00');
 
-        window.location.href = `checkout.php?Product_Name=${Product_Name}&Author=${Author}&Publisher=${Publisher}&price=${price}`;
+        window.location.href = `checkout.php?Product_Name=${Product_Name}&Author=${Author}&Publisher=${Publisher}&Price=${price}`;
 
         // window.location.href = "checkout.php?Product_Name=${Product_Name}&Publisher=${Publisher}&price= ${price}&Author=${Author}";
     }
