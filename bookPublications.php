@@ -31,9 +31,9 @@ include './header.php';
         var Product_Name = encodeURIComponent('<?php echo $bookDetails['Title']; ?>');
         var Author = encodeURIComponent('<?php echo $bookDetails['Author']; ?> ');
         var Publisher = encodeURIComponent('<?php echo $bookDetails['Publisher']; ?>');
-        var price = encodeURIComponent('100.00');
+        var Price = encodeURIComponent('100.00');
 
-        window.location.href = `checkout.php?Product_Name=${Product_Name}&Author=${Author}&Publisher=${Publisher}&Price=${price}`;
+        window.location.href = `checkout.php?Product_Name=${Product_Name}&Author=${Author}&Publisher=${Publisher}&Price=${Price}`;
 
         // window.location.href = "checkout.php?Product_Name=${Product_Name}&Publisher=${Publisher}&price= ${price}&Author=${Author}";
     }
@@ -42,7 +42,9 @@ include './header.php';
 <section class="border-top mt-3 pt-3">
     <div class="container">
         <div class="d-flex align-items-center justify-content-between">
-            <h5><?php echo $bookDetails['Publisher']; ?></h5>
+            <a href="publisherDetails.php?Publisher=<?php echo urldecode($bookDetails['Publisher']) ; ?>">
+                <h5><?php echo $bookDetails['Publisher']; ?></h5>
+            </a>
             <button class="btn btn-md btn-primary"><i class="fa fa-user-plus me-2" aria-hidden="true"></i>Subscribe</button>
         </div>
     </div>
@@ -51,11 +53,11 @@ include './header.php';
     <div class="container">
 
         <div class="row pt-5">
-            <div class="col-md-4 col-lg-3 ">
+            <div class="col-md-4 col-lg-3 mb-5 ">
                 <img class="border border-2 border-body-tertiary shadow" src="data:image/jpeg;base64,<?php echo base64_encode($bookDetails['Image']); ?>" alt="Book_cover" />
             </div>
-            <div class="col-md-8 col-lg-9 ps-5">
-                <div class="d-flex align-items-centers">
+            <div class="col-md-8 col-lg-9 ps-md-5">
+                <div class="d-flex align-items-centers justify-content-between">
                     <h1 class="text-black fs-1 fw-normal"><?php echo $bookDetails['Title']; ?></h1>
                     <div class="dropdown">
                         <button class="btn btn-md border-0 d-flex align-items-center text-primary" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-share-alt text-primary me-2" aria-hidden="true"></i>Share</button>
