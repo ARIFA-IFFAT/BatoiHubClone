@@ -46,7 +46,7 @@ $conn->close();
 
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-english" role="tabpanel" aria-labelledby="v-pills-english-tab" tabindex="0"><?php include 'englishPublications.php' ; ?></div>
-                    <div class="tab-pane fade" id="v-pills-odia" role="tabpanel" aria-labelledby="v-pills-odia-tab" tabindex="0">...profile</div>
+                    <div class="tab-pane fade" id="v-pills-odia" role="tabpanel" aria-labelledby="v-pills-odia-tab" tabindex="0"><?php include 'odiaPublications.php' ; ?></div>
                 </div>
             </div>
         </div>

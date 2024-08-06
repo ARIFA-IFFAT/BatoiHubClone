@@ -2,13 +2,13 @@
 
 include 'config.php';
 
-$publisherName = isset($_GET['Publisher'])? $_GET['Publisher'] :'' ;
+$publisherName = isset($_GET['Publisher'])? $_GET['Publisher'] : '' ;
 $offset = isset($_GET['offset']) ? intval($_GET['offset']) : 0;
 
 $cards = '';
 
 //sql query
-$sql = " SELECT Id, Title, Byline, Publisher, Author, Pub_date, Image FROM e_book WHERE Language = 'English' AND Publisher = ? LIMIT 8 OFFSET ? ";
+$sql = " SELECT Id, Title, Byline, Publisher, Author, Pub_date, Image FROM e_book WHERE Language = 'Odia' AND Publisher = ? LIMIT 8 OFFSET ? ";
 $stmt= $conn->prepare($sql);
 $stmt->bind_param('si', $publisherName, $offset);
 $stmt->execute();
@@ -46,7 +46,7 @@ $conn->close();
     </div>
     <div class="row mt-5">
         <div class="text-center">
-            <button class="btn btn-primary " id="loadMoreBtnEng"><i class="fa fa-arrow-down me-2" aria-hidden="true"></i>Load more</button>
+            <button class="btn btn-primary " id="loadMoreBtnOd"><i class="fa fa-arrow-down me-2" aria-hidden="true"></i>Load more</button>
         </div>
     </div>
 </div>
@@ -56,9 +56,9 @@ $conn->close();
     $(document).ready(function(){
     var offset = 8; // initial offset
     var publisher = encodeURIComponent('<?php echo $publisherName; ?>');
-    $('#loadMoreBtnEng').on('click', function(){
+    $('#loadMoreBtnOd').on('click', function(){
         $.ajax({
-            url: 'load_more_en_books.php',
+            url: 'load_more_od_books.php',
             type: 'GET',
             data: {
                 offset: offset,
